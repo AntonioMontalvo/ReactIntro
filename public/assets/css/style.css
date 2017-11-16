@@ -1,0 +1,88 @@
+body {
+font-family: 'Montserrat', sans-serif;
+}
+#my-name {
+    margin-top: 47px;
+}
+
+#level-nav {
+    margin-top: 39px;
+}
+
+h1 {
+	font-size: 50px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+h4 {
+	margin-top: 30px;
+	font-family: 'BioRhyme', serif;
+}
+
+h5 {
+	margin-top: 10px;
+}
+
+h2,h5 {
+	font-family: 'BioRhyme', serif;
+}
+ 
+img {
+    margin-top: 37px;
+    margin-bottom: 30px
+}
+
+a {
+	color: rgba(247, 169, 90, 0.72);
+
+}
+
+
+
+ul {
+	list-style-type: none;
+}
+
+.bullet {
+	list-style-type: square;
+}
+
+li {
+	margin-top: 25px;
+	margin-left: -15px;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+.col-md-12 {
+	background-color: rgba(255, 251, 240, 0.93);
+}
+
+#content {
+	margin-top: 30px;
+}
+#mounting {
+	margin-right: -20px; 
+}
+
+.page {
+	width: 95%;
+}
+
+code {
+	display: flex;
+	background-color: white;
+	margin-bottom: 10px;
+}
+
+
+@media (max-width: 47.9385em){
+	.nav {
+		display: block;
+	}
+
+	h1 {
+		text-align: left;
+	}
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Antonio Montalvo">
+    <meta name="description" content="Lifecycle. Updating the UI with React's lifecycle methods">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme|Montserrat:200" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Lifecycle</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="assets/images/my-logo.png" alt="Logo">
+            </div>
+            <div class="col-md-10">
+                <ul class=" nav nav-pills justify-content-end" id="level-nav">
+                    <li class="nav-item "><a class="nav-link" href="/">React Concepts</a></li>
+                    <li class="nav-item "><a class="nav-link " href="/elements">Elements in React</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/components">Components</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/updateState">Updating States</a></li>
+                    <li class="nav-item "><a class="nav-link" href="#">Lifecycle</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/examples">Examples</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>LIFECYCLE</h1>
+                <hr class="my-4">
+            </div>
+        </div>
+    </div>
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-md-2">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="https://reactjs.org/docs/react-component.html" title="React components" target="_blank">The Component Lyfecycle</a></li>
+                    
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <h2>What exatcly is Lifecycle?</h2>
+                <p>We can declare special methods on the component class to override code at particular times. These methods are called lifecycle hooks and each component can have serveral. With them we can say what to do at some point when something happens.</p>
+                <p>When an instance of a component is beign created and inserted into the DOM, we call this part of the lifecycle the <mark>Mounting</mark> phase. Here we have a list of the hooks available for this phase:</p>
+                <ul class="bullet">
+                    <li>constructor()</li>
+                    <li>componentWillMount()</li>
+                    <li>render()</li>
+                    <li>componentDidMount()</li>
+                </ul>
+                <p>Another phase of the lyfecycle happens when the components are updated. In the <mark>Updating</mark> phase, changes to props or state happen. This changes we'll force the component to re-render. Here we have a list of the hooks available for this phase:</p>
+                <ul class="bullet">
+                    <li>componentWillReceiveProps()</li>
+                    <li>shouldComponentUpdate()</li>
+                    <li>componentWillUpdate()</li>
+                    <li>render()</li>
+                    <li>componentDidUpdate()</li>
+                </ul>
+                <p>The final phase of a component happens when is removed from the DOM. We call this <mark>Unmounting</mark>. Only one hook here.</p>
+                <ul class="bullet">
+                    <li>componentWillUnmount()</li>
+                </ul>
+                <h2 id="birth">Mounting</h2>
+                <p>The <mark>birth</mark> or mounting is the part dedicated to the construction. props and state of the Component instance are defined and initialized. I've prepared a diagram to further explain this phase.</p>
+                <img id="mounting" src="assets/images/mounting.png" alt="mounting phase diagram">
+                <h2 id="growth">Update</h2>
+                <p>The bulk of avaliable methods fall into this phase. I've prepared another diagram to condense as much as possible what this methods do.</p>
+                <img src="assets/images/update.png" alt="update phase diagram">
+                <h2>How do we call this methods</h2>
+                <p>We don't. Remember, React uses a "Declarative" language. The methods are invoked either before or after a component is mounted, unmounted or rendered. The focus of this tutorial is to introduce React so we won't attempt to explain and use every single hook.</p>
+                <h2 id="death">Unmounting</h2>
+                <p>The <mark>death</mark> phase  happens when the element tree no longer has a matching key to our Component, whe this happens React removes the Component instance and its children. Let's see our last diagram.</p>
+                <img src="assets/images/unmount.png" alt="death phase diagram">
+
+            </div>
+            <div class="col-md-2">
+                <h5>In this page</h5>
+                <ul>
+                    <li><a href="#birth">Mounting</a></li>
+                    <li><a href="#growth">Updating</a></li>
+                    <li><a href="#death">Unmounting</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Antonio Montalvo">
+    <meta name="description" content="React DOM elements and redenring">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme|Montserrat:200" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>React DOM elements</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="assets/images/my-logo.png" alt="Logo">
+            </div>
+            <div class="col-md-10">
+                <ul class=" nav nav-pills justify-content-end" id="level-nav">
+                    <li class="nav-item "><a class="nav-link" href="/">React Concepts</a></li>
+                    <li class="nav-item "><a class="nav-link " href="#">Elements in React</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/components">Components</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/updateState">Updating States</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/lifecycle">Lifecycle</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/examples">Examples</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>REACT ELEMENTS</h1>
+                <hr class="my-4">
+            </div>
+        </div>
+    </div>
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-md-2">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="https://reactjs.org/docs/dom-elements.html" title="react .org" target="_blank">React DOM Elements</a></li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <h2>React DOM elements <i>vs.</i> browser DOM elements.</h2>
+                <p>Whilst all HTML elements are element nodes, React DOM elements are objects. They are cheap to create, they are what we want to show on the screen and it is what React <i>renders</i>. The power of React elements is that they live inside a special type of function called <i>Component</i>. In React we have a single root DOM node that is use to render all Components "with their elements". We do this by passing both root and Components to ReactDOM.render().</p>
+                <h2>react and react-dom packages.</h2>
+                <p>To be able to access React in Node.js you are going to add react and react-dom to your package.json file so both dependencies are available in app.js. To install Node.js first go to nodejs.org, click install and follow the instructions. <a href="https://nodejs.org" target="_blank"> Go to nodejs.org</a>. Then after you are done with npm init, run  the code below to install react and react-dom.</p>
+                <code>npm install react --save</code>
+                <code>npm install react react-dom --save</code>
+                <h3 id="react-dom">ReactDOM.render();</h3>
+                <p>This function accepts two parameters. The first one is the Component we want to render, and the second is the single root DOM node in our html where the element or component will be rendered. That is it! The cool thing is that our Component's elements may also have other nested elements and this can have more Components. More on Components later. Now let's take a look at an example that shows everything we've seen so far.</p>
+                <h6>THIS IS A BOILERPLATE HTML WITH A SINGLE DIV WHERE REACT RENDERS</h6>
+                <img src="assets/images/single-div.png" alt="boilerplate html with single div for React rendering">
+                <h6 id="sample">RENDERING ELEMENTS AND EMBEDDED EXPRESSIONS</h6>
+                <img src="assets/images/ReactDOM.png" alt="ReactDOM.render function">
+
+            </div>
+            <div class="col-md-2">
+                <h5>In this page</h5>
+                <ul>
+                    <li><a href="#react-dom">ReactDOM();</a></li>
+                    <li><a href="#sample">Sample Code</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+</body>
+
+</html>

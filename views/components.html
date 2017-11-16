@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Antonio Montalvo">
+    <meta name="description" content="Introducing Components and props.">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme|Montserrat:200" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Components</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="assets/images/my-logo.png" alt="Logo">
+            </div>
+            <div class="col-md-10">
+                <ul class=" nav nav-pills justify-content-end" id="level-nav">
+                    <li class="nav-item "><a class="nav-link" href="/">React Concepts</a></li>
+                    <li class="nav-item "><a class="nav-link " href="/elements">Elements in React</a></li>
+                    <li class="nav-item "><a class="nav-link" href="#">Components</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/updateState">Updating States</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/lifecycle">Lifecycle</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/examples">Examples</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>REACT COMPONENTS</h1>
+                <hr class="my-4">
+            </div>
+        </div>
+    </div>
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-md-2">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="https://reactjs.org/docs/react-component.html" title="React components" target="_blank">React.Component</a></li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <h2>What is the importance of components in React?</h2>
+                <p>Components are a conerstone in React. The whole idea is to split the UI into independent, reusable pieces allowing an organized arquitecture of components and subcomponents where behavior, logic and layout is self-contained. Components are just functions that accept inputs called <mark>props</mark>. They return React elements describing what should be render on the screen.</p>
+                <h2>Defining and rendering components.</h2>
+                <p>We are going to use an ES6 class to define components. At its most basic we define the component wich will render a React element and its props. Then adding the user-defined component to an element we can pass JSX attributes to the component as an object that we call props. Because components are just functions, every time we call it we can pass differents props. Let's see this in action demonstrating its reusability concept</p>
+                <img id="first-component" src="assets/images/first-component.png" alt="our first components">
+                <h2 id="state-component">Adding State to the component</h2>
+                <p>There is a different between props and state. <mark>props</mark> are given from a parent to a child or passed to the component; <mark>state</mark> is purely internal to the component. In other words, when we define a component, it has either a default state or a user-specified state. A property is passed to the component as an attribute or from the parent component to the child component.</p>
+                <p>In the example above props are given to the component using <i>this.props.type.</i> Now we are going to add Local State to a Class. To do this we add <mark>this.state</mark> to the constructor right after <mark>super()</mark>. We assign an object to this local state where all properties internal to the component are initialized with a value.</p>
+                <img src="assets/images/add-state.png" alt="Adding Local state to a component with this.state">
+                <p>This is what we've built so far.</p>
+                <img id="rendered" src="assets/images/local-state-output.png" alt="local state output from the previous example">
+            </div>
+            <div class="col-md-2">
+                <h5>In this page</h5>
+                <ul>
+                    <li><a href="#first-component">An ES6 Component</a></li>
+                    <li><a href="#state-component">Add Local State</a></li>
+                    <li><a href="#rendered">Rendered Example</a></li>
+                    <li><a href="#set-state">setState()</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+</body>
+
+</html>

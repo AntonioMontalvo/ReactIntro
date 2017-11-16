@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Antonio Montalvo">
+    <meta name="description" content="Introducing React">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme|Montserrat:200" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Intro to React</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="assets/images/my-logo.png" alt="Logo">
+            </div>
+            <div class="col-md-10">
+                <ul class=" nav nav-pills justify-content-end" id="level-nav">
+                    <li class="nav-item "><a class="nav-link" href="#">React Concepts</a></li>
+                    <li class="nav-item "><a class="nav-link " href="/elements">Elements in React</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/components">Components</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/updateState">Updating States</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/lifecycle">Lifecycle</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/examples">Examples</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>INTRO TO REACT</h1>
+                <hr class="my-4">
+            </div>
+        </div>
+    </div>
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-md-2">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="https://reactjs.org/" title="react .org" target="_blank">React Official</a></li>
+                    <li><a href="https://jsx.github.io/" title="JSX official repo" target="_blank">JSX GitHub</a></li>
+                    <li><a href="https://babeljs.io/" title="Babel official page" target="_blank">Babel Offficial</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla" title="ES6 page" target="_blank">ECMAScript 6</a></li>
+                    <li><a href="https://webpack.github.io/" title="Webpack" target="_blank">Webpack</a></li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <h2>What is React?</h2>
+                <p>React is a JavaSrcipt library created by the Facebook to meet their vision of a single page application. It is designed to create interactive UIs based on encapsulated components that compose the UI. This components allow you to design simple views and set states. React can pass data through your application and update and render the right components when the data changes. Some companies that use React are <i>Facebook, Instagram, Airbnb and Skype.</i>.</p>
+                <p>React uses a "Declarative" language, that means that with it you "say", this should be X or I want this to happen, but you won't say how to do it, you don't give instructions on how something should be done. An example of a declarative language is SQL. In the other hand with an "Imperative" language you describe how you want something to be executed; you specifically give instructions. For example a for loop is Imperative.</p>
+                <h2>Client Side rendering <i>vs.</i> Server Side Rendering</h2>
+                <p>React is for client side rendering. The clear advantage is that your server does less work. It will be use to handle just files, static stuff. In the other hand the browser will do most of the work. This way it's easier to scale your application much further, costing less money. But keep in mind that it doesn't have to be one way or the other, a hybrid approach is best in many cases.</p>
+                <h2>Before we move forward.</h2>
+                <p>The objective is to end up building an application using the MERN stack. I assume that you already know about Nodejs, Express and MongoDB. If you don't, stop right away and come back when you understand the other technologies.</p>
+                <p>There are different ways to create an application with React. We will be using a syntax called JSX, A compiler called Babel, ES6 and Webpack . Let's begin with JSX.</p>
+                <h3 id="jsx">JSX</h3>
+                <p>JSX is an extension to JavaScript use in React to produce "elements". Do we need to use JSX exclusively? Nope, you can use regular JavaScript but it easier to write it in JSX. JavaScript <i>expressions</i> are units of code that resolve to a value e.g x = 7 or 3 + 2. This expressions are embedded in JSX using curly braces. See below for an example.</p>
+                <code>const element = &lt;h1&gt;{title}&lt;/h1&gt;</code>
+                <p>But browser don't read JSX they read plain JavaScript. That's what <i>Babel</i> is used for.</p>
+                <h3>Babel</h3>
+                <p>Babel is a compiler to put in JSX or next generation Javascript and get browser compatible JavaScript out. At this point I recommend installing Babel in your text editor. Do that and come back.</p>
+                <h3 id="classes">ES6 Classes</h3>
+                <p>JavaScript classes provides a much simpler syntax to create objects and deal with inheritance. There are two ways to define a class, as a <i>Class Declaration</i> or as a <i>Class Expression.</i> To access the class, it needs to be defined before it is accessed, this is because they are hoisted.</p>
+                <p>One more thing. You will notice that each class has a special <mark>constructor</mark> method. It is use to create and initialize an object within the class. Also right after the constructor the keyword <mark>super</mark> is used. We use super to call functions on an object's parent. When used with a constructor, <mark>super</mark> must be used before <mark><i>this</i></mark> can be used. Ok, now that we have explained what a constructor is and the use of super lets take a look at our classes.</p>
+                <img src="assets/images/classes.png" alt="classes example">
+                <h2>How do I create a React application with Node.js</h2>
+                <p>You'll need to install Babel and Webpack as development dependencies.</p>
+                <h3 id="webpack">Webpack</h3>
+                <p>Webpack is a module bundler. It's main purpose is to bundle JavaScript files for usage in a broswer.</p>
+                <p>Because we use Node.js we need to pass a configuration object as a parameter. You can read more about it here.  <a href="https://webpack.github.io/docs/configuration.html" title="webpack contigutarion" target="_blank">webpack configutation page</a></p>
+                <p>As usual we need to do a few more things to correctly set up our development environment. You'll nee to create a file to write the config code so webpack can access it. You may name this <mark>webpack.config.js</mark>. Look at the image below for a sample.</p>
+                <img src="assets/images/webpack-config.png" alt="configuration sample">
+                <code>npm install -g webpack</code>
+                <p>To run it:</p>
+                <code>webpack -w</code>
+                <p>The flag -w stands for watch. Running webpack like this will continuosly run webpack.</p>
+                <h3 id="babel">Babel</h3>
+                <p>For webpack and node.js to be able to use babel npm install --save the following packages:</p>
+                <ul>
+                    <li>babel-core</li>
+                    <li>babel-preset-env</li>
+                    <li>babel-preset-es2015</li>
+                    <li>babel-preset-react</li>
+                </ul>
+                <h2>So, what's next?</h2>
+                <p>Now that we have a better idea about what React is and the technologies we need to create an application within Node.js we are ready to talk about <i>elements, Componentes, props, states, Lifecycle, events, keys and forms.</i> I recommend you follow along with the GitHub repository. <a href="https://github.com/AntonioMontalvo/ReactIntro" title="repository for Intro to React" target="_blank">Clone it here!</a></p>
+            </div>
+            <div class="col-md-2">
+                <h5>In this page</h5>
+                <ul>
+                    <li><a href="#jsx">JSX</a></li>
+                    <li><a href="#classes">JavaScript Classes</a></li>
+                    <li><a href="#webpack">Webpack</a></li>
+                    <li><a href="#babel">Babel</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+</body>
+
+</html>
